@@ -1,0 +1,74 @@
+body {
+    background-image: url("../images/food.png");
+}
+
+h1 {
+    background-color: #FFA500;
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    margin: 15px;
+    padding: 30px 10px 0px 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.mainContent {
+    background-color: #f0c67a; 
+    width: 500px;
+    height: 400px;
+    line-height: 20px;
+    margin: 15px;
+}
+
+.mainContent p {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: green;
+}
+
+.container {
+
+}
+
+#compNum {
+    display: inline-block;
+    background-color: #08b62e;
+    width: 225px;
+    height: 130px;
+    margin: 0 15px;
+}
+
+#winsLosses {
+    display: inline-block;
+    background-color: #26dcf6;
+    width: 100px;
+    height: 130px;
+    margin-left: -5px;
+}
+
+.crystals img {
+    width: 100px;
+    height: 100px;
+    margin: 15px 0px 0px 15px;
+}
+
+.last {
+    background-color: #0d8dcc;
+    width: 225px;
+    height: 25px;
+    color: #fff;
+    text-align: left;
+    padding-top: 8px;
+    padding-left: 5px;
+    margin: 15px;
+}
+
+#totalScore {
+    background-color: #0d8dcc;
+    width: 230px;
+    height: 125px;
+    margin: 15px;
+}
