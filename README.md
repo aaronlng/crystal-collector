@@ -2,14 +2,14 @@
 
 Status
 
-  - Set up page structure
+  - Page set up
+
+  - CSS implemented
+
+  - Crystals create random numbers
   
 Next steps:
 
-  - Add crystal images
-  
-  - style page
-  
-  - pseudo code logic for jquery
-  
-  - code .js so game functions
+- Get if else statements implemented
+
+- create "reset" function
