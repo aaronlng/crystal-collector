@@ -8,15 +8,18 @@ var userScore = 0;
 var wins = 0;
 var losses = 0;
 
-//Function to create random computer number
-$("#compNum").text(compNum);
-$("#wins").text("Wins: " + wins);
-$("#losses").text("Losses: " + losses);
-
 //crystal buttons
 $("#crystal1").on("click", function() {
     userScore = userScore + crystal1;
     $("#totalScore").text(userScore);
+    if (userScore === compNum) {
+        console.log("winner!");
+        wins++;
+        $("#wins").prepend("<p>", "You Win!");
+    } else if (userScore > compNum) {
+        console.log("You Lose!");
+        losses++;
+    }
 });
 
 $("#crystal2").on("click", function() {
@@ -34,8 +37,15 @@ $("#crystal4").on("click", function() {
     $("#totalScore").text(userScore);
 });
 
+$("#compNum").text(compNum);
+$("#wins").text("Wins: " + wins);
+$("#losses").text("Losses: " + losses);
+
+//determining whether user wins or loses
 
 
+
+console.log(compNum);
 console.log(crystal1);
 console.log(crystal2);
 console.log(crystal3);
