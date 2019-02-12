@@ -38,15 +38,31 @@ h1 {
     background-color: #08b62e;
     width: 225px;
     height: 130px;
-    margin: 0 15px;
+    color: purple;
+    font-size: 32px;
+    margin: 15px;
+    margin-top: 10px;
 }
 
-#winsLosses {
+.gameOutcome {
     display: inline-block;
     background-color: #26dcf6;
     width: 100px;
     height: 130px;
-    margin-left: -5px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+#wins {
+    text-align: left;
+    padding-top: 20px;
+    margin-left: 15px;
+}
+
+#losses {
+    text-align: left;
+    padding-top: 30px;
+    margin-left: 15px;
 }
 
 .crystals img {
