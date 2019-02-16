@@ -1,15 +1,3 @@
 # unit-4-game
 
-Status
-
-  - Page set up
-
-  - CSS implemented
-
-  - Crystals create random numbers
-
-  - Functions defined and reset function created
-  
-Next steps:
-
-- Get win and lose statement to show up before reset
+This is a Crystal Collector game. The computer generates a random number. The crystals are each assigned to a number as well. When you click on a crystal it adds that respective number to your total score. The goal of the game is to match the number to the number the computer guessed. If you go over the number, you lose. Good Luck!

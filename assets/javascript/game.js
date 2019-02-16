@@ -20,7 +20,6 @@ function reset() {
     winner = false;
     loser = false;
     $("#compNum").text(compNum);
-    $("#message").text("");
     $("#wins").text("Wins: " + wins);
     $("#losses").text("Losses: " + losses);
     $("#totalScore").text(userScore);
@@ -35,28 +34,29 @@ function checkForWin() {
     if (userScore === compNum) {
         wins++;
         console.log("winner!");
-        $("#message").text("You Win!");
         $("#wins").text("Wins: " + wins);
         winner = true;
     } else if (userScore > compNum) {
         losses++;
         console.log("loser!");
-        $("#message").text("You Lose!");
         $("#losses").text("Losses: " + losses);
         loser = true;
     }
 }
 
 function checkForReset() {
-    if (winner === true || loser === true){
+    if (winner === true) {
+        $("#message").text("You Win!");
+        reset();
+    } else if (loser === true) {
+        $("#message").text("You Lose!");
         reset();
     }
 }
 
-reset();
-
 //crystal buttons
 $("#crystal1").on("click", function() {
+    $("#message").text("");
     userScore = userScore + crystal1;
     $("#totalScore").text(userScore);
     checkForWin();
@@ -64,6 +64,7 @@ $("#crystal1").on("click", function() {
 });
 
 $("#crystal2").on("click", function() {
+    $("#message").text("");
     userScore = userScore + crystal2;
     $("#totalScore").text(userScore);
     checkForWin();
@@ -71,6 +72,7 @@ $("#crystal2").on("click", function() {
 });
 
 $("#crystal3").on("click", function() {
+    $("#message").text("");
     userScore = userScore + crystal3;
     $("#totalScore").text(userScore);
     checkForWin();
@@ -78,11 +80,14 @@ $("#crystal3").on("click", function() {
 });
 
 $("#crystal4").on("click", function() {
+    $("#message").text("");
     userScore = userScore + crystal4;
     $("#totalScore").text(userScore);
     checkForWin();
     checkForReset();
 });
+
+reset();
 
 
 
