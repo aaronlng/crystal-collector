@@ -54,6 +54,12 @@ h1 {
     margin-left: 0px;
 }
 
+#message {
+    text-align: left;
+    padding-top: 20px;
+    margin-left: 15px;
+}
+
 #wins {
     text-align: left;
     padding-top: 20px;

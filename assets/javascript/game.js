@@ -7,49 +7,84 @@ var crystal4= Math.floor(Math.random() * ((12-1)+1) + 1);
 var userScore = 0;
 var wins = 0;
 var losses = 0;
+var winner = false;
+var loser = false;
+
+function reset() {
+    compNum = Math.floor(Math.random() * ((120-19)+1) + 19);
+    crystal1 = Math.floor(Math.random() * ((12-1)+1) + 1);
+    crystal2 = Math.floor(Math.random() * ((12-1)+1) + 1);
+    crystal3 = Math.floor(Math.random() * ((12-1)+1) + 1);
+    crystal4 = Math.floor(Math.random() * ((12-1)+1) + 1);
+    userScore = 0;
+    winner = false;
+    loser = false;
+    $("#compNum").text(compNum);
+    $("#message").text("");
+    $("#wins").text("Wins: " + wins);
+    $("#losses").text("Losses: " + losses);
+    $("#totalScore").text(userScore);
+    console.log(compNum);
+    console.log(crystal1);
+    console.log(crystal2);
+    console.log(crystal3);
+    console.log(crystal4);
+}
+
+function checkForWin() {
+    if (userScore === compNum) {
+        wins++;
+        console.log("winner!");
+        $("#message").text("You Win!");
+        $("#wins").text("Wins: " + wins);
+        winner = true;
+    } else if (userScore > compNum) {
+        losses++;
+        console.log("loser!");
+        $("#message").text("You Lose!");
+        $("#losses").text("Losses: " + losses);
+        loser = true;
+    }
+}
+
+function checkForReset() {
+    if (winner === true || loser === true){
+        reset();
+    }
+}
+
+reset();
 
 //crystal buttons
 $("#crystal1").on("click", function() {
     userScore = userScore + crystal1;
     $("#totalScore").text(userScore);
-    if (userScore === compNum) {
-        console.log("winner!");
-        wins++;
-        $("#wins").prepend("<p>", "You Win!");
-    } else if (userScore > compNum) {
-        console.log("You Lose!");
-        losses++;
-    }
+    checkForWin();
+    checkForReset();
 });
 
 $("#crystal2").on("click", function() {
     userScore = userScore + crystal2;
     $("#totalScore").text(userScore);
+    checkForWin();
+    checkForReset();
 });
 
 $("#crystal3").on("click", function() {
     userScore = userScore + crystal3;
     $("#totalScore").text(userScore);
+    checkForWin();
+    checkForReset();
 });
 
 $("#crystal4").on("click", function() {
     userScore = userScore + crystal4;
     $("#totalScore").text(userScore);
+    checkForWin();
+    checkForReset();
 });
 
-$("#compNum").text(compNum);
-$("#wins").text("Wins: " + wins);
-$("#losses").text("Losses: " + losses);
 
-//determining whether user wins or loses
-
-
-
-console.log(compNum);
-console.log(crystal1);
-console.log(crystal2);
-console.log(crystal3);
-console.log(crystal4);
 
 
 
