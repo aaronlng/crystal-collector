@@ -11,11 +11,11 @@ var winner = false;
 var loser = false;
 
 function reset() {
-    compNum = Math.floor(Math.random() * ((120-19)+1) + 19);
-    crystal1 = Math.floor(Math.random() * ((12-1)+1) + 1);
-    crystal2 = Math.floor(Math.random() * ((12-1)+1) + 1);
-    crystal3 = Math.floor(Math.random() * ((12-1)+1) + 1);
-    crystal4 = Math.floor(Math.random() * ((12-1)+1) + 1);
+    compNum
+    crystal1
+    crystal2
+    crystal3
+    crystal4
     userScore = 0;
     winner = false;
     loser = false;
